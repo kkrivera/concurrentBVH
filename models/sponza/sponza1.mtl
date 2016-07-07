@@ -1,0 +1,332 @@
+# Blender MTL File: ''
+# Material Count: 27
+newmtl 16___Default
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+
+
+newmtl Material
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Material__25_lion.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd lion.png
+map_Bump lion_ddn.png
+map_Ka lion.png
+
+
+newmtl Material__298_background.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd background.png
+map_Bump background_ddn.png
+map_Ka background.png
+
+
+newmtl Material__47
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+
+
+newmtl Material__57_vase_plant.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd vase_plant.png
+map_d vase_plant_mask.png
+map_Ka vase_plant.png
+
+
+newmtl arch_sponza_arch_diff.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_arch_diff.png
+map_Ka sponza_arch_diff.png
+
+
+newmtl bricks_spnza_bricks_a_diff.t
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd spnza_bricks_a_diff.png
+map_Bump spnza_bricks_a_diff.png
+map_Ka spnza_bricks_a_diff.png
+
+
+newmtl ceiling_sponza_ceiling_a_diff
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_ceiling_a_diff.png
+map_Ka sponza_ceiling_a_diff.png
+
+
+newmtl chain_chain_texture.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd chain_texture.png
+map_d chain_texture_mask.png
+map_Bump chain_texture_ddn.png
+map_Ka chain_texture.png
+
+
+newmtl column_a_sponza_column_a_diff.
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_column_a_diff.png
+map_Bump sponza_column_a_ddn.png
+map_Ka sponza_column_a_diff.png
+
+
+newmtl column_b_sponza_column_b_diff.
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_column_b_diff.png
+map_Bump sponza_column_b_ddn.png
+map_Ka sponza_column_b_diff.png
+
+
+newmtl column_c_sponza_column_c_diff.
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_column_c_diff.png
+map_Bump sponza_column_c_ddn.png
+map_Ka sponza_column_c_diff.png
+
+
+newmtl details_sponza_details_diff.t
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_details_diff.png
+map_Ka sponza_details_diff.png
+
+
+newmtl fabric_a_sponza_fabric_diff.tg
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_fabric_diff.png
+map_Ka sponza_fabric_diff.png
+
+
+newmtl fabric_c_sponza_curtain_diff.t
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_curtain_diff.png
+map_Ka sponza_curtain_diff.png
+
+
+newmtl fabric_d_sponza_fabric_blue_di
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_fabric_blue_diff.png
+map_Ka sponza_fabric_blue_diff.png
+
+
+newmtl fabric_e_sponza_fabric_green_d
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_fabric_green_diff.png
+map_Ka sponza_fabric_green_diff.png
+
+
+newmtl fabric_f_sponza_curtain_green_
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_curtain_green_diff.png
+map_Ka sponza_curtain_green_diff.png
+
+
+newmtl fabric_g_sponza_curtain_blue_d
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_curtain_blue_diff.png
+map_Ka sponza_curtain_blue_diff.png
+
+
+newmtl flagpole_sponza_flagpole_diff.
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_flagpole_diff.png
+map_Ka sponza_flagpole_diff.png
+
+
+newmtl floor_sponza_floor_a_diff.t
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_floor_a_diff.png
+map_Ka sponza_floor_a_diff.png
+
+
+newmtl leaf_sponza_thorn_diff.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_thorn_diff.png
+map_d sponza_thorn_mask.png
+map_Bump sponza_thorn_ddn.png
+map_Ka sponza_thorn_diff.png
+
+
+newmtl roof_sponza_roof_diff.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd sponza_roof_diff.png
+map_Ka sponza_roof_diff.png
+
+
+newmtl vase_hanging_vase_hanging.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd vase_hanging.png
+map_Ka vase_hanging.png
+
+
+newmtl vase_round_vase_round.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd vase_round.png
+map_Bump vase_round_ddn.png
+map_Ka vase_round.png
+
+
+newmtl vase_vase_dif.png
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.470400 0.470400 0.470400
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd vase_dif.png
+map_Ka vase_dif.png
+
+

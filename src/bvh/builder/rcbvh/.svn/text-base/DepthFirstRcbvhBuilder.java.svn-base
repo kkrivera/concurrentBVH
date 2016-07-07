@@ -1,0 +1,92 @@
+package bvh.builder.rcbvh;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import rayMap.RayMap;
+import rayTrace.util.RayTraceUtil;
+import triangle.Triangle;
+import voxel.util.VoxelUtil;
+import bvh.BvhNode;
+import bvh.BvhTree;
+
+public class DepthFirstRcbvhBuilder extends AbstractRcbvhBuilder
+{
+	List<BvhNode> children;
+
+	@Override
+	public BvhTree buildTree(Set<Triangle> triangles, Set<RayMap> rayMaps, Integer numReflections)
+			throws Exception
+	{
+		BvhTree bvhTree = new BvhTree(buildBvhNode(triangles), new ArrayList<BvhNode>());
+		children = (List<BvhNode>) bvhTree.getTreeCollection();
+
+		Set<RayMap> subRayMapArray = new HashSet<RayMap>(rayMaps);
+		for (int i = 0; i <= numReflections + 1; i++)
+		{
+			recursiveTreeBuild(bvhTree.getParentBvhNode(), bvhTree, subRayMapArray);
+
+			subRayMapArray = new HashSet<RayMap>(RayTraceUtil.generateInderectRayMaps(
+					subRayMapArray, i < (numReflections + 1), i < numReflections));
+		}
+
+		return bvhTree;
+	}
+
+	/**
+	 * A recursive method to build the {@link BvhNode} children through
+	 * recursion, going down the left side of the {@link BvhTree} first
+	 * 
+	 * @param bvhNode
+	 *        The {@link BvhNode} for which children may be created
+	 * @param bvhTree
+	 *        The {@link BvhTree} containing all of the {@link BvhNode} children
+	 * @throws Exception
+	 */
+	private void recursiveTreeBuild(BvhNode bvhNode, BvhTree bvhTree, Set<RayMap> rayMaps)
+			throws Exception
+	{
+		Set<RayMap> intersectedRayMaps = new HashSet<RayMap>();
+
+		for (RayMap rayMap : rayMaps)
+		{
+			if (VoxelUtil.rayIntersectsVoxel(rayMap.getRay(), bvhNode.getVoxel()))
+			{
+				intersectedRayMaps.add(rayMap);
+			}
+		}
+
+		if (!intersectedRayMaps.isEmpty())
+		{
+			if (bvhNode.getIsLeaf())
+			{
+				for (RayMap rayMap : intersectedRayMaps)
+				{
+					rayMap.getTriangles().addAll(bvhNode.getTriangles());
+				}
+				return;
+			}
+
+			if (!bvhNode.getHasChildren())
+			{
+				buildChildren(bvhNode, bvhTree);
+			}
+
+			// Traverse Left Side
+			if (bvhNode.getLeftBvhNodeIndex() != null)
+			{
+				recursiveTreeBuild(children.get(bvhNode.getLeftBvhNodeIndex()), bvhTree,
+						intersectedRayMaps);
+			}
+
+			// Traverse Right Side
+			if (bvhNode.getRightBvhNodeIndex() != null)
+			{
+				recursiveTreeBuild(children.get(bvhNode.getRightBvhNodeIndex()), bvhTree,
+						intersectedRayMaps);
+			}
+		}
+	}
+}

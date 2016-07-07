@@ -1,0 +1,254 @@
+# Blender MTL File: ''
+# Material Count: 23
+newmtl Material
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl gal_brass_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_cabin_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_deck_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_fcourse_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_fighead_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_flag_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_ftop_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_hull_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_int_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_mast_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_mcourse_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_metal_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_mizzen_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_mtop_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_railing_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_rope_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_spritsail_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_trim2_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_trim3_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_trim_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_windows_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+
+newmtl gal_yardarm_Galleon.jpg
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.599216 0.599216 0.599216
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Galleon.jpg
+
+

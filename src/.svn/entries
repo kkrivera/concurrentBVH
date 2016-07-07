@@ -1,0 +1,113 @@
+10
+
+dir
+28
+https://concurrent-bvh.googlecode.com/svn/trunk/ConcurrentBvh/src
+https://concurrent-bvh.googlecode.com/svn
+
+
+
+2011-10-12T04:21:18.587759Z
+28
+theghoti
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cd20b5b6-eb5f-aa0d-1619-49ca6366d613
+
+
+
+
+
+
+0
+
+test
+dir
+
+bvh
+dir
+
+modelloader
+dir
+
+enums
+dir
+
+rayMap
+dir
+
+math
+dir
+
+ray
+dir
+
+object3d
+dir
+
+voxel
+dir
+
+intersectionbundle
+dir
+
+tvalue
+dir
+
+vector
+dir
+
+matrix
+dir
+
+samples
+dir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
+
+barycentric
+dir
+
+triangle
+dir
+
+window
+dir
+
+printstream
+dir
+
+rayTrace
+dir
+

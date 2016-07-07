@@ -1,0 +1,448 @@
+# Blender MTL File: ''
+# Material Count: 41
+newmtl ACGRILL_AirCGRILL.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.335686 0.335686 0.335686
+Ks 0.015679 0.015679 0.015679
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd AirCGRILL.jpg
+
+
+newmtl Material
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Preview:1
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.062745 0.062745 0.062745
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Preview_woodlite3.jpg
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.360784 0.225882 0.213334
+Ks 0.013725 0.013725 0.013725
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd woodlite3.jpg
+
+
+newmtl airconditioner_Airconditionergreen.j
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.272941 0.288627 0.260392
+Ks 0.023529 0.023529 0.023529
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Airconditionergreen.jpg
+
+
+newmtl alum_aluminumdoor.jpg
+Ns 11.764706
+Ka 0.000000 0.000000 0.000000
+Kd 0.354498 0.354498 0.354498
+Ks 0.178431 0.178431 0.178431
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd aluminumdoor.jpg
+
+
+newmtl aluminum1_aluminum155.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.392145 0.392145 0.392145
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd aluminum155.jpg
+
+
+newmtl ant_AntennaSilver.jpg
+Ns 0.000000
+Ka 0.000000 0.000000 0.000000
+Kd 0.376458 0.376458 0.376458
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd AntennaSilver.jpg
+
+
+newmtl blackhole
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.061799 0.038041 0.010895
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl cement1_Cement1.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.379608 0.379608 0.379608
+Ks 0.076463 0.076463 0.076463
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Cement1.jpg
+
+
+newmtl cement2_Cement3.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.348235 0.348235 0.348235
+Ks 0.087449 0.018776 0.087618
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Cement3.jpg
+
+
+newmtl cement5_cement5.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.407843 0.407843 0.407843
+Ks 0.088235 0.088235 0.088235
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd cement5.jpg
+
+
+newmtl cementporch_porchroofd.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.410981 0.410981 0.410981
+Ks 0.033333 0.033333 0.033333
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd porchroofd.jpg
+
+
+newmtl chimney_Chimney3.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.360760 0.360760 0.360760
+Ks 0.019280 0.089487 0.014168
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Chimney3.jpg
+
+
+newmtl darkmetal_steelBlack2.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.395294 0.395294 0.395294
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd steelBlack2.jpg
+
+
+newmtl doorHandle
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.263530 0.263530 0.263530
+Ks 0.007843 0.007843 0.007843
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl doorhandle_Silvera.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.436066 0.436066 0.436066
+Ks 0.041169 0.052926 0.060785
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Silvera.jpg
+
+
+newmtl dryervent_dryervent.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.304302 0.304302 0.304302
+Ks 0.103914 0.103914 0.103914
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dryervent.jpg
+
+
+newmtl farm_Shutters3.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.392145 0.392145 0.392145
+Ks 0.063157 0.081094 0.026612
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Shutters3.jpg
+
+
+newmtl farmwall2_FarmHouseWall2B.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.398419 0.398419 0.398419
+Ks 0.007843 0.007843 0.007843
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd FarmHouseWall2B.jpg
+
+
+newmtl farmwall_FarmHouseWall.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.389020 0.389020 0.389020
+Ks 0.026963 0.038468 0.096521
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd FarmHouseWall.jpg
+
+
+newmtl fuelbase_fueloilbase.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.420380 0.385882 0.285490
+Ks 0.152933 0.152933 0.152933
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd fueloilbase.jpg
+
+
+newmtl fueloilpipe_steelBlack1.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.395294 0.100392 0.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd steelBlack1.jpg
+
+
+newmtl glass4
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.404706 0.404706 0.404706
+Ks 0.243137 0.243137 0.243137
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl kitchen_KitchenWindow.jpg
+Ns 5.882353
+Ka 0.000000 0.000000 0.000000
+Kd 0.567843 0.567843 0.567843
+Ks 0.068627 0.068627 0.068627
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd KitchenWindow.jpg
+
+
+newmtl lite_liteglass.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.084694 0.000000 0.119216
+Ks 0.137255 0.137255 0.137255
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd liteglass.jpg
+
+
+newmtl metal_steelBlack2.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.367059 0.367059 0.367059
+Ks 0.143137 0.143137 0.143137
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd steelBlack2.jpg
+
+
+newmtl mortar_Mortar.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.407843 0.407843 0.407843
+Ks 0.078432 0.078432 0.078432
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Mortar.jpg
+
+
+newmtl porchROOF2_porchroofA.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.304314 0.304314 0.304314
+Ks 0.069726 0.030388 0.047616
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd porchroofA.jpg
+
+
+newmtl porchROOFA_porchroofC.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.301177 0.301177 0.301177
+Ks 0.015671 0.015671 0.015671
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd porchroofC.jpg
+
+
+newmtl rail_Railgreen.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.473726 0.473726 0.473726
+Ks 0.000000 0.196078 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Railgreen.jpg
+
+
+newmtl roof_FarmHouseRoof4.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.389020 0.389020 0.389020
+Ks 0.057427 0.043694 0.037591
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd FarmHouseRoof4.jpg
+
+
+newmtl sidewalk1_sidewalk1.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.404694 0.404694 0.404694
+Ks 0.062715 0.062715 0.062715
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd sidewalk1.jpg
+
+
+newmtl sidewalk2_sidewalk2.jpg
+Ns 9.803922
+Ka 0.000000 0.000000 0.000000
+Kd 0.272929 0.272929 0.272929
+Ks 0.022354 0.046586 0.095575
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd sidewalk2.jpg
+
+
+newmtl smwindow_FarmGlass1.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.272917 0.213334 0.445490
+Ks 0.097933 0.054665 0.087885
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd FarmGlass1.jpg
+
+
+newmtl stepstone_stepstone.jpg
+Ns 13.725490
+Ka 0.000000 0.000000 0.000000
+Kd 0.420380 0.420380 0.420380
+Ks 0.068627 0.068627 0.068627
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd stepstone.jpg
+
+
+newmtl white
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.439216 0.439216 0.439216
+Ks 0.026505 0.081384 0.039353
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl whitepaint_WhitePaint4house.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.527059 0.527059 0.527059
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd WhitePaint4house.jpg
+
+
+newmtl whitetrim_WhiteTrimA.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.357647 0.357647 0.357647
+Ks 0.068627 0.068627 0.068627
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd WhiteTrimA.jpg
+map_Bump WhitePaint4house.bum
+
+
+newmtl window2_window2.jpg
+Ns 13.725490
+Ka 0.000000 0.000000 0.000000
+Kd 0.351373 0.351373 0.351373
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd window2.jpg
+
+
+newmtl window_window.jpg
+Ns 27.450980
+Ka 0.000000 0.000000 0.000000
+Kd 0.439216 0.439216 0.439216
+Ks 0.013581 0.014527 0.033013
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd window.jpg
+
+

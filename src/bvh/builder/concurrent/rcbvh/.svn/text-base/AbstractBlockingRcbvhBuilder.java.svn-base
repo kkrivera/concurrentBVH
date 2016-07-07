@@ -1,0 +1,191 @@
+package bvh.builder.concurrent.rcbvh;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import rayMap.RayMap;
+import rayTrace.util.RayTraceUtil;
+import voxel.util.VoxelUtil;
+import bvh.BvhNode;
+import bvh.BvhTree;
+import bvh.concurrent.ConcurrentBvhNode;
+
+public abstract class AbstractBlockingRcbvhBuilder extends AbstractConcurrentRcbvhBuilder
+{
+	public AtomicInteger runningThreads = new AtomicInteger(0);
+	public Integer numReflections;
+
+	/**
+	 * A class to be run by a {@link Thread} for building a {@link BvhTree}
+	 * 
+	 * @author kkrivera
+	 */
+	protected class BuildTree implements Runnable
+	{
+		private BvhTree bvhTree;
+		private Set<RayMap> rayMaps;
+		private Boolean writeRayMapToRaster;
+
+		public BuildTree(BvhTree bvhTree, Set<RayMap> rayMaps, Boolean writeRayMapToRaster)
+		{
+			this.bvhTree = bvhTree;
+			this.rayMaps = rayMaps;
+			this.writeRayMapToRaster = writeRayMapToRaster;
+		}
+
+		@Override
+		public void run()
+		{
+			try
+			{
+				Set<RayMap> subRayMapArray = new HashSet<RayMap>(rayMaps);
+				for (int i = 0; i <= numReflections + 1; i++)
+				{
+					recursiveThreadedTreeBuild((ConcurrentBvhNode) bvhTree.getParentBvhNode(),
+							bvhTree, rayMaps);
+
+					subRayMapArray = new HashSet<RayMap>(RayTraceUtil.generateInderectRayMaps(
+							subRayMapArray, true, i < numReflections));
+				}
+
+				// Write RayMaps to Raster
+				if (writeRayMapToRaster)
+				{
+					RayTraceUtil.writeRayMapToRaster(rayMaps);
+				}
+
+				runningThreads.decrementAndGet();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+
+	/**
+	 * A method to be used to recursively build a {@link BvhTree}
+	 * 
+	 * @param bvhNode
+	 *        The parent {@link BvhNode} to the children nodes
+	 * @param bvhTree
+	 *        The {@link BvhTree} containing the full list of children
+	 * @throws Exception
+	 */
+	protected void recursiveThreadedTreeBuild(ConcurrentBvhNode bvhNode, BvhTree bvhTree,
+			Set<RayMap> rayMaps) throws Exception
+	{
+		if (rayMaps.isEmpty())
+		{
+			return;
+		}
+
+		Set<RayMap> intersectedRayMaps = new HashSet<RayMap>();
+
+		for (RayMap rayMap : rayMaps)
+		{
+			if (VoxelUtil.rayIntersectsVoxel(rayMap.getRay(), bvhNode.getVoxel()))
+			{
+				intersectedRayMaps.add(rayMap);
+			}
+		}
+
+		if (bvhNode.getTriangles().size() == 1)
+		{
+			for (RayMap rayMap : intersectedRayMaps)
+			{
+				rayMap.getTriangles().addAll(bvhNode.getTriangles());
+			}
+			return;
+		}
+
+		if (!intersectedRayMaps.isEmpty())
+		{
+			// Locks the node and builds children
+			bvhNode.lockAndExecute(new FutureTask<Boolean>(new BuildChildrenCallable(bvhNode,
+					bvhTree)));
+
+			List<BvhNode> bvhTreeList = (List<BvhNode>) bvhTree.getTreeCollection();
+
+			// Determines whether the left or right side will be traversed first
+			Boolean traverseLeft = null;
+			do
+			{
+				traverseLeft = bvhNode.traverseLeft.get();
+			}
+			while (!bvhNode.traverseLeft.compareAndSet(traverseLeft, !traverseLeft));
+
+			// Traverses the left side of the tree if traverse left is true
+			if (traverseLeft)
+			{
+
+				// Traverse Left Side
+				if (bvhNode.getLeftBvhNodeIndex() != null)
+				{
+					recursiveThreadedTreeBuild(
+							(ConcurrentBvhNode) bvhTreeList.get(bvhNode.getLeftBvhNodeIndex()),
+							bvhTree, intersectedRayMaps);
+				}
+
+				// Traverse Right Side
+				if (bvhNode.getRightBvhNodeIndex() != null)
+				{
+					recursiveThreadedTreeBuild(
+							(ConcurrentBvhNode) bvhTreeList.get(bvhNode.getRightBvhNodeIndex()),
+							bvhTree, intersectedRayMaps);
+				}
+			}
+			else
+			{
+				// Traverse Right Side
+				if (bvhNode.getRightBvhNodeIndex() != null)
+				{
+					recursiveThreadedTreeBuild(
+							(ConcurrentBvhNode) bvhTreeList.get(bvhNode.getRightBvhNodeIndex()),
+							bvhTree, intersectedRayMaps);
+				}
+
+				// Traverse Left Side
+				if (bvhNode.getLeftBvhNodeIndex() != null)
+				{
+					recursiveThreadedTreeBuild(
+							(ConcurrentBvhNode) bvhTreeList.get(bvhNode.getLeftBvhNodeIndex()),
+							bvhTree, intersectedRayMaps);
+				}
+			}
+		}
+	}
+
+	/**
+	 * A {@link Callable} class for building chilren for a single
+	 * {@link BvhNode}
+	 * 
+	 * @author kkrivera
+	 */
+	protected class BuildChildrenCallable implements Callable<Boolean>
+	{
+		private BvhNode bvhNode;
+		private BvhTree bvhTree;
+
+		public BuildChildrenCallable(BvhNode bvhNode, BvhTree bvhTree)
+		{
+			this.bvhNode = bvhNode;
+			this.bvhTree = bvhTree;
+		}
+
+		@Override
+		public Boolean call() throws Exception
+		{
+			Boolean childrenRequired = nodeRequiresChildren(bvhNode);
+			if (childrenRequired)
+			{
+				buildChildren(bvhNode, bvhTree);
+			}
+			return childrenRequired;
+		}
+	}
+}

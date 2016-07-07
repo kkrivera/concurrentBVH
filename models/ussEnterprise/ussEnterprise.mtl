@@ -1,0 +1,970 @@
+# Blender MTL File: ''
+# Material Count: 91
+newmtl __GhostWhite_noCullin_Nacelle_Markings_3_co
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.778039 0.778039 0.800000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Nacelle_Markings_3_copynoCulling.jpg
+
+
+newmtl __LightGray_noCulling___Metal-floor_noCulli
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.614902 0.614902 0.614902
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Metal-floor_noCulling.jpg
+
+
+newmtl Hull_Markings_2_copyI
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl __Black_noCullingID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __GhostWhite_noCullin_Nacelle_Markings_.000
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.778039 0.778039 0.800000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Nacelle_Markings_3_copy1.jpg
+
+
+newmtl Nacelle_Markings_3_co_Nacelle_Markings_3_co
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Nacelle_Markings_3_copynoCulling.jpg
+
+
+newmtl __Snow_noCullingID_Metal_Aluminum_Corrug
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Metal_Aluminum_Corrugated.jpg
+
+
+newmtl __Low_E_Glass_noCulli
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.225882 0.655686 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __OrangeRed_ID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.216470 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Hull_Markings_2_copyI_Hull_Markings_2_copy.
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl Lower_Saucer_Markings_Lower_Saucer_Markings
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Lower_Saucer_Markings_5noCulling.jpg
+
+
+newmtl __Gold_noCullingID_Hull_Markings_copy.jp
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.674510 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_copy.jpg
+
+
+newmtl __LightGray_noCulling_Hull_Markings_2_copy.
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.614902 0.614902 0.614902
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl Color_002noCullingID___CorrogateRust_noCul
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.630588 0.630588 0.630588
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __CorrogateRust_noCulling.jpg
+
+
+newmtl Color_002noCullingID_Hull_Markings_2_copy.
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.630588 0.630588 0.630588
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl __Metal-floor_noCulli
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Metal-floor_noCulling.jpg
+
+
+newmtl Nacelle_Markings_.000_Nacelle_Markings_.000
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Nacelle_Markings_3_copy1.jpg
+
+
+newmtl Nacelle_Markings_3_co___Metal-floor_noCulli
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Metal-floor_noCulling.jpg
+
+
+newmtl __0133_Gray_noCulling
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.401569 0.401569 0.401569
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Bridge_Markings_copy1_Bridge_Markings_copy1
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Bridge_Markings_copy1.jpg
+
+
+newmtl Upper_Saucer_Markings_Upper_Saucer_Markings
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Upper_Saucer_Markings_5noCulling.jpg
+
+
+newmtl __Safety_Glass_1noCul___Safety_Glass_1noCul
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Safety_Glass_1noCulling.jpg
+
+
+newmtl Bridge_Markings_copy1
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Bridge_Markings_copy1.jpg
+
+
+newmtl __Moccasin_noCullingI
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.715294 0.567843
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Bisque_noCullingID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.715294 0.614902
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Gray_Glass_noCullin
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.401569 0.401569 0.401569
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Hangar_Deck_TextureID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hangar_Deck_Texture.jpg
+
+
+newmtl FrontColorNoCullingID_Hull_Markings_2_copy.
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl __GhostWhite_noCullin
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.778039 0.778039 0.800000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Neck_Markings_copynoC
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Neck_Markings_copynoCulling.jpg
+
+
+newmtl __Low_E_Glass_noCulli_Bridge_Markings_copyn
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.225882 0.655686 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Bridge_Markings_copynoCulling.jpg
+
+
+newmtl __Snow_noCullingID_Hull_Markings_copy.jp
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_copy.jpg
+
+
+newmtl __DarkGray_noCullingI
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.254118 0.254118 0.254118
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Snow_noCullingID_Hangar_Deck_Texture.j
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hangar_Deck_Texture.jpg
+
+
+newmtl __Gray_ID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.401569 0.401569 0.401569
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Dark_Green_Glass_no
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.194510 0.285490 0.015686
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __OrangeRed_ID_Hull_Markings_copy.jp
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.216470 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_copy.jpg
+
+
+newmtl __Snow_noCullingID_Hull_Markings_2_copy.
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl __Silver_noCullingID___Metal-floor_1.jpg
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.602353 0.602353 0.602353
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Metal-floor_1.jpg
+
+
+newmtl Color_002noCullingID_Bridge_Markings_copyn
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.630588 0.630588 0.630588
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Bridge_Markings_copynoCulling.jpg
+
+
+newmtl __0010_Snow_ID___CorrogateRust_noCul
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __CorrogateRust_noCulling.jpg
+
+
+newmtl Hangar_Deck_Texture1n_Hull_Markings_2_copy.
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl __Snow_noCullingID_Neck_Markings_copynoC
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Neck_Markings_copynoCulling.jpg
+
+
+newmtl Hull_Markings_copyID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_copy.jpg
+
+
+newmtl __Indidan_Red_Glass_n
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.643138 0.288627 0.288627
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __OrangeRed_ID_Hull_Markings_2_copy1
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.216470 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy1noCulling.jpg
+
+
+newmtl __Silver_noCullingID_Hull_Markings_2_copy.
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.602353 0.602353 0.602353
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl __Beige_3noCullingID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.326274 0.272941 0.210196
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __OrangeRed_ID_Hangar_Deck_Texture1n
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.216470 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hangar_Deck_Texture1noCulling.jpg
+
+
+newmtl __Gainsboro_noCulling
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.690196 0.690196 0.690196
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __0133_Gray_noCulling_Upper_Saucer_Markings
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.401569 0.401569 0.401569
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Upper_Saucer_Markings_5noCulling.jpg
+
+
+newmtl __Silver_noCullingID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.602353 0.602353 0.602353
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Nacelle_Markings_3_co
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Nacelle_Markings_3_copynoCulling.jpg
+
+
+newmtl Hull_Markings_copy1no_Hull_Markings_2_copy.
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl __Metal-floor_noCulli___Metal-floor_noCulli
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Metal-floor_noCulling.jpg
+
+
+newmtl FrontColorNoCullingID___CorrogateRust_noCul
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __CorrogateRust_noCulling.jpg
+
+
+newmtl __DeepSkyBlue_noCulli
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.599216 0.800000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Safety_Glass_ID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Safety_Glass_.jpg
+
+
+newmtl __LightGray_noCulling___Metal-floor_1.jpg
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.614902 0.614902 0.614902
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Metal-floor_1.jpg
+
+
+newmtl __Orange_Glass_noCull
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.517647 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Lavender_noCullingI
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.721569 0.721569 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Snow_noCullingID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __0133_Gray_noCulling_Lower_Saucer_Markings
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.401569 0.401569 0.401569
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Lower_Saucer_Markings_5noCulling.jpg
+
+
+newmtl __0010_Snow_ID_Upper_Saucer_Markings
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Upper_Saucer_Markings_5noCulling.jpg
+
+
+newmtl Hull_Markings_2_copyI_Hull_Markings_2_copy1
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy1noCulling.jpg
+
+
+newmtl __0010_Snow_ID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Color_004ID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.445490 0.445490 0.445490
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Neck_Markings_copynoC_Neck_Markings_copynoC
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Neck_Markings_copynoCulling.jpg
+
+
+newmtl __OrangeRed_ID_Hull_Markings_copy1no
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.216470 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_copy1noCulling.jpg
+
+
+newmtl __DarkGray_noCullingI_Lower_Saucer_Markings
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.254118 0.254118 0.254118
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Lower_Saucer_Markings_5noCulling.jpg
+
+
+newmtl Metal_Aluminum_Corrug
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Metal_Aluminum_Corrugated.jpg
+
+
+newmtl Material
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __LightGray_noCulling
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.614902 0.614902 0.614902
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Snow_noCullingID___Safety_Glass_.jpg
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.784314
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Safety_Glass_.jpg
+
+
+newmtl __Gold_noCullingID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.674510 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __PaleGoldenrod_ID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.746666 0.727843 0.533334
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Metal-floor_1ID___Metal-floor_1.jpg
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Metal-floor_1.jpg
+
+
+newmtl __LemonChiffon_ID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.643138
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl FrontColorNoCullingID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Metal-floor_1ID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __Metal-floor_1.jpg
+
+
+newmtl __GhostWhite_noCullin_Bridge_Markings_copyn
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.778039 0.778039 0.800000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Bridge_Markings_copynoCulling.jpg
+
+
+newmtl __Beige_1noCullingID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.661961 0.592941 0.451765
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Bridge_Markings_copyn_Bridge_Markings_copyn
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Bridge_Markings_copynoCulling.jpg
+
+
+newmtl FrontColorNoCullingID_Bridge_Markings_copy1
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Bridge_Markings_copy1.jpg
+
+
+newmtl __CorrogateRust_noCul
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd __CorrogateRust_noCulling.jpg
+
+
+newmtl __0014_DarkSalmon_noC
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.730980 0.470588 0.382745
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Charcoal_noCullingI
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.109804 0.109804 0.109804
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl __Red_Glass_noCulling
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.000000 0.000000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Hull_Markings_2_copy1_Hull_Markings_2_copy.
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hull_Markings_2_copy.jpg
+
+
+newmtl __DimGray_ID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.329412 0.329412 0.329412
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+
+newmtl Color_002noCullingID
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.630588 0.630588 0.630588
+Ks 0.165000 0.165000 0.165000
+Ni 1.000000
+d 1.000000
+illum 2
+
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/44/trunk/ConcurrentBvh/src/bvh/builder/rcbvh
+END
+AbstractRcbvhBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/45/trunk/ConcurrentBvh/src/bvh/builder/rcbvh/AbstractRcbvhBuilder.java
+END
+IRcbvhBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/70/trunk/ConcurrentBvh/src/bvh/builder/rcbvh/IRcbvhBuilder.java
+END
+DepthFirstRcbvhBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/70/trunk/ConcurrentBvh/src/bvh/builder/rcbvh/DepthFirstRcbvhBuilder.java
+END

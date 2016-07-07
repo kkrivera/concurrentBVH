@@ -1,0 +1,550 @@
+package test;
+
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
+import javax.vecmath.Vector3f;
+
+import modelloader.ModelLoaderUtil;
+import printstream.util.PrintStreamUtil;
+import rayTrace.RayTrace;
+import triangle.Triangle;
+import vector.util.Vector3fUtil;
+import voxel.Voxel;
+import voxel.util.VoxelUtil;
+import window.Window;
+import bvh.builder.DepthFirstBvhBuilder;
+import bvh.builder.IBvhBuilder;
+import bvh.builder.concurrent.rcbvh.BlockingNChildrenRcbvhBuilder;
+import bvh.builder.concurrent.rcbvh.BlockingRecursiveRcbvhBuilder;
+import bvh.builder.concurrent.rcbvh.IConcurrentRcbvhBuilder;
+import bvh.builder.rcbvh.DepthFirstRcbvhBuilder;
+import bvh.builder.rcbvh.IRcbvhBuilder;
+
+public class TestRcbvhRender
+{
+
+	public static void main(String[] args)
+	{
+		// Setup our output file
+		PrintStream fileOut = null;
+		String filename = "test_rcbvh_out.txt";
+
+		if (args.length > 0)
+			filename = args[0];
+
+		try
+		// to open the file outputFileName
+		{
+			fileOut = new PrintStream(filename);
+		}
+		catch (FileNotFoundException e)
+		{
+			System.err.printf("\nFailure to load \"%s\". Closing program...", filename);
+			System.exit(0);
+		}
+
+		/*
+		 * Models
+		 */
+		Map<String, String> models = new HashMap<String, String>();
+		// models.put("models\\legoMan\\", "LegoMan.obj");
+		// models.put("models\\parliament\\", "parliament.obj");
+		// models.put("models\\halo3\\", "halo3Scene.obj");
+		// models.put("models\\church\\", "church.obj");
+		// models.put("models\\mainzCathedral\\", "mainzCathedral.obj");
+		// models.put("models\\ussEnterprise\\", "ussEnterprise.obj");
+		// models.put("models\\bunny\\", "bunny.obj");
+		// models.put("models\\sponza\\", "sponza1.obj");
+		// models.put("models\\hockeyArena\\", "hockeyArena.obj");
+		// models.put("models\\farmHouse\\", "farmHouse.obj");
+		// models.put("models\\emperorPalpatine\\", "emperorPalpatine.obj");
+		// models.put("models\\office\\", "office.obj");
+		// models.put("models\\assasinsCreed\\", "assasinsCreed.obj");
+		// models.put("models\\venus\\", "venus.obj");
+		// models.put("models\\mk4\\", "mk4.obj");
+		// models.put("models\\buddha\\", "buddha.obj");
+		// models.put("models\\ship\\", "ship.obj");
+		// models.put("models\\demon\\", "demon.obj");
+		// models.put("models\\chessboard\\", "chessboard.obj");
+		models.put("models\\tieFighter\\", "tieFighter.obj");
+
+		Map<String, Integer> modelTriangleCounts = new HashMap<String, Integer>();
+
+		/*
+		 * Test Params
+		 */
+		int numTestsPerModel = 5;
+		int startThreads = 16;
+		int maxThreads = 16;
+		boolean testSingleThreadedBvh = true;
+		boolean testSingleThreadedRcbvh = true;
+		boolean testConcurrentThreadDivisionRcbvh = !true;
+		boolean testConcurrentNChildrenRcbvh = !true;
+
+		/*
+		 * Ray Trace Params
+		 */
+		Map<Integer, Integer> resolutions = new LinkedHashMap<Integer, Integer>();
+		// resolutions.put(320, 240);
+		resolutions.put(640, 480);
+		// resolutions.put(800, 600);
+		// resolutions.put(1024, 768);
+		// resolutions.put(1280, 720);
+		// resolutions.put(1366, 768);
+		// resolutions.put(1920, 1080);
+
+		int numReflections = 0;
+		Boolean showRaster = false;
+		float startZoom = 1f;
+		float endZoom = startZoom;
+		float zoomStep = 0.5f;
+
+		/*
+		 * Timing Params
+		 */
+		long start;
+		long end;
+		Long total = new Long(0);
+
+		/*
+		 * BvhBuilders
+		 */
+		IBvhBuilder depthFirstBvhBuilder = new DepthFirstBvhBuilder();
+		IRcbvhBuilder depthFirstRcbvhBuilder = new DepthFirstRcbvhBuilder();
+		IConcurrentRcbvhBuilder threadDivisionRcbvhBuilder = new BlockingRecursiveRcbvhBuilder();
+		IConcurrentRcbvhBuilder nChildrenRcbvhBuilder = new BlockingNChildrenRcbvhBuilder();
+
+		Map<String, Map<Float, Map<String, Map<IBvhBuilder, Map<Integer, Long>>>>> buildTotals = new LinkedHashMap<String, Map<Float, Map<String, Map<IBvhBuilder, Map<Integer, Long>>>>>();
+
+		String sep = "****************************************************";
+
+		try
+		{
+			for (String path : models.keySet())
+			{
+				PrintStreamUtil.println(fileOut, sep);
+				start = System.currentTimeMillis();
+				Set<Triangle> triangles = ModelLoaderUtil.loadModel(path + models.get(path));
+				end = System.currentTimeMillis();
+				PrintStreamUtil.println(fileOut, "Loaded " + triangles.size() + " Triangles",
+						start, end);
+				modelTriangleCounts.put(models.get(path), triangles.size());
+
+				Voxel parentNodeVoxel = VoxelUtil.getVoxel(triangles);
+				Vector3f centerOfVoxel = VoxelUtil.getVoxelCenter(parentNodeVoxel);
+
+				for (Integer resolutionWidth : resolutions.keySet())
+				{
+					Window.initWindow(resolutionWidth, resolutions.get(resolutionWidth));
+					String resolution = resolutionWidth + "x" + resolutions.get(resolutionWidth);
+					for (float zoom = startZoom; zoom <= endZoom; zoom += zoomStep)
+					{
+						/*
+						 * Sponza
+						 */
+						// Demo1
+						// Vector3f eye = new Vector3f(-20, 50, -15);
+						// Vector3f at = Vector3fUtil.add(eye, new Vector3f(-1,
+						// .25f, -1));
+						// Vector3f light = Vector3fUtil.add(eye, new
+						// Vector3f(-200, 100, -100));
+						// Demo2
+						// Vector3f eye = new Vector3f(-500, 100, -115);
+						// Vector3f at = Vector3fUtil.add(eye, new Vector3f(1f,
+						// .05f, -1.5f));
+						// Vector3f light = Vector3fUtil.add(eye, new
+						// Vector3f(150, 150, 150));
+						// Demo3
+						// Vector3f eye = new Vector3f(-20, 700, -15);
+						// Vector3f at = Vector3fUtil.add(eye, new Vector3f(1,
+						// -.25f, 1));
+						// Vector3f light = Vector3fUtil.add(eye, new
+						// Vector3f(100, 0, -100));
+
+						/*
+						 * Demon
+						 */
+						// Demo1
+						// Vector3f eye = new Vector3f(parentNodeVoxel.getMaxX()
+						// / zoom,
+						// parentNodeVoxel.getMaxY() / zoom,
+						// parentNodeVoxel.getMaxZ() / zoom);
+						// Vector3f at = Vector3fUtil.add(centerOfVoxel, new
+						// Vector3f(0, 0, 0));
+						// Vector3f light = Vector3fUtil.add(centerOfVoxel, new
+						// Vector3f(-10, 20, 20));
+						// Demo2
+						// Vector3f eye = new Vector3f(
+						// (centerOfVoxel.getX() + (parentNodeVoxel.getMaxX() -
+						// parentNodeVoxel
+						// .getMinX()) * .15f),
+						// (centerOfVoxel.getY() + (parentNodeVoxel.getMaxY() -
+						// parentNodeVoxel
+						// .getMinY()) / 3.5f),
+						// (centerOfVoxel.getZ() + (parentNodeVoxel.getMaxZ() -
+						// parentNodeVoxel
+						// .getMinZ()) * .85f));
+						// Vector3f at = Vector3fUtil.add(centerOfVoxel, new
+						// Vector3f(0, 0, 0));
+						// Vector3f light = Vector3fUtil.add(centerOfVoxel, new
+						// Vector3f(-30, 30, 20));
+
+						/*
+						 * MK4
+						 */
+						// Demo1
+						// Vector3f eye = new Vector3f(parentNodeVoxel.getMaxX()
+						// / zoom,
+						// parentNodeVoxel.getMaxY() / zoom,
+						// parentNodeVoxel.getMaxZ() / zoom);
+						// Vector3f at = Vector3fUtil.add(centerOfVoxel, new
+						// Vector3f(0, 0, 0));
+						// Vector3f light = Vector3fUtil.add(centerOfVoxel, new
+						// Vector3f(-1, 0, 5));
+						// Demo2
+						// zoom = 1.25f;
+						// Vector3f eye = new Vector3f(parentNodeVoxel.getMaxX()
+						// / zoom,
+						// parentNodeVoxel.getMaxY() / zoom,
+						// parentNodeVoxel.getMaxZ() / zoom);
+						// Vector3f at = Vector3fUtil.add(centerOfVoxel, new
+						// Vector3f(0, 0, 0));
+						// Vector3f light = Vector3fUtil.add(eye, new
+						// Vector3f(1, 5, 3));
+
+						/*
+						 * Ship
+						 */
+						// Demo1
+						// Vector3f eye = new Vector3f(
+						// (centerOfVoxel.getX() + (parentNodeVoxel.getMaxX() -
+						// parentNodeVoxel.getMinX()) * 1.25f)
+						// / zoom,
+						// (centerOfVoxel.getY() + (parentNodeVoxel.getMaxY() -
+						// parentNodeVoxel
+						// .getMinY()) / 3.5f) / zoom,
+						// (centerOfVoxel.getZ() + (parentNodeVoxel.getMaxZ() -
+						// parentNodeVoxel
+						// .getMinZ()) * 0f) / zoom);
+						// Vector3f at = Vector3fUtil.add(
+						// VoxelUtil.getVoxelCenter(parentNodeVoxel),
+						// new Vector3f(0, (parentNodeVoxel.getMaxY() -
+						// parentNodeVoxel
+						// .getMinY()) / 8.0f, 0));
+						// Vector3f light = Vector3fUtil.add(eye, new
+						// Vector3f(10, 20, 10));
+
+						/*
+						 * Chessboard
+						 */
+						// Demo1
+						// Vector3f eye = new Vector3f(
+						// (centerOfVoxel.getX() + (parentNodeVoxel.getMaxX() -
+						// parentNodeVoxel.getMinX()) * .75f)
+						// / zoom,
+						// (centerOfVoxel.getY() + (parentNodeVoxel.getMaxY() -
+						// parentNodeVoxel
+						// .getMinY()) / 3.5f) / zoom,
+						// (centerOfVoxel.getZ() + (parentNodeVoxel.getMaxZ() -
+						// parentNodeVoxel
+						// .getMinZ()) * 0f) / zoom);
+						// Vector3f at = Vector3fUtil.add(
+						// VoxelUtil.getVoxelCenter(parentNodeVoxel),
+						// new Vector3f(0, (parentNodeVoxel.getMaxY() -
+						// parentNodeVoxel
+						// .getMinY()) / 8.0f, 0));
+						// Vector3f light = Vector3fUtil
+						// .add(eye,
+						// new Vector3f((parentNodeVoxel.getMaxX() -
+						// parentNodeVoxel
+						// .getMinX()) * 2f, 0, 0));
+
+						/*
+						 * Tie Figter
+						 */
+						// Demo1
+						Vector3f eye = new Vector3f(
+								(centerOfVoxel.getX() + (parentNodeVoxel.getMaxX() - parentNodeVoxel.getMinX()) * .15f)
+										/ zoom,
+								(centerOfVoxel.getY() + (parentNodeVoxel.getMaxY() - parentNodeVoxel
+										.getMinY()) / 2.5f) / zoom,
+								(centerOfVoxel.getZ() + (parentNodeVoxel.getMaxZ() - parentNodeVoxel
+										.getMinZ()) * .75f) / zoom);
+						Vector3f at = Vector3fUtil.add(centerOfVoxel, new Vector3f(0,
+								(parentNodeVoxel.getMaxY() - parentNodeVoxel.getMinY()) / 8.0f, 0));
+						Vector3f light = Vector3fUtil.add(eye, new Vector3f(0, 0, 0));
+						// Demo2
+						// Vector3f eye = new Vector3f(
+						// (centerOfVoxel.getX() + (parentNodeVoxel.getMaxX() -
+						// parentNodeVoxel.getMinX()) * .25f)
+						// / zoom,
+						// (centerOfVoxel.getY() + (parentNodeVoxel.getMaxY() -
+						// parentNodeVoxel
+						// .getMinY()) / 1.25f) / zoom,
+						// (centerOfVoxel.getZ() + (parentNodeVoxel.getMaxZ() -
+						// parentNodeVoxel
+						// .getMinZ()) * .65f) / zoom);
+						// Vector3f at = Vector3fUtil.add(centerOfVoxel, new
+						// Vector3f(0,
+						// (parentNodeVoxel.getMaxY() -
+						// parentNodeVoxel.getMinY()) / 8.0f, 0));
+						// Vector3f light = Vector3fUtil
+						// .add(eye,
+						// new Vector3f((parentNodeVoxel.getMaxX() -
+						// parentNodeVoxel
+						// .getMinX()) * 2f, 0, 0));
+
+						/*
+						 * Corner
+						 */
+						// Vector3f eye = new Vector3f(parentNodeVoxel.getMaxX()
+						// / zoom,
+						// parentNodeVoxel.getMaxY() / zoom,
+						// parentNodeVoxel.getMaxZ() / zoom);
+						// Vector3f at = Vector3fUtil.add(centerOfVoxel, new
+						// Vector3f(0, 0, 0));
+						// Vector3f light = Vector3fUtil.add(eye, new
+						// Vector3f(0, 0, 0));
+
+						/*
+						 * Front Center
+						 */
+						// Vector3f eye = new Vector3f(
+						// (centerOfVoxel.getX() + (parentNodeVoxel.getMaxX() -
+						// parentNodeVoxel.getMinX()) * 1.25f)
+						// / zoom,
+						// (centerOfVoxel.getY() + (parentNodeVoxel.getMaxY() -
+						// parentNodeVoxel
+						// .getMinY()) / 3.5f) / zoom,
+						// (centerOfVoxel.getZ() + (parentNodeVoxel.getMaxZ() -
+						// parentNodeVoxel
+						// .getMinZ()) * 0f) / zoom);
+						// Vector3f at = Vector3fUtil.add(
+						// centerOfVoxel,
+						// new Vector3f(0, (parentNodeVoxel.getMaxY() -
+						// parentNodeVoxel
+						// .getMinY()) / 8.0f, 0));
+						// Vector3f light = Vector3fUtil.add(eye, new
+						// Vector3f(0, 0, 0));
+						// Vector3f light = Vector3fUtil
+						// .add(eye,
+						// new Vector3f((parentNodeVoxel.getMaxX() -
+						// parentNodeVoxel
+						// .getMinX()) * 2f, 0, 0));
+
+						/*
+						 * Center
+						 */
+						// Vector3f eye = new Vector3f(centerOfVoxel.getX(),
+						// centerOfVoxel.getY(),
+						// centerOfVoxel.getZ());
+						// Vector3f at = Vector3fUtil.add(eye, new Vector3f(1,
+						// 1, 1));
+						// Vector3f light = Vector3fUtil
+						// .add(eye,
+						// new Vector3f((parentNodeVoxel.getMaxX() -
+						// parentNodeVoxel
+						// .getMinX()) * 2f, 0, 0));
+
+						for (int i = 0; i < numTestsPerModel; i++)
+						{
+							PrintStreamUtil.println(fileOut, "\n****Test " + (i + 1) + " for "
+									+ models.get(path) + "****");
+							PrintStreamUtil.println(fileOut, "Resolution: " + resolutionWidth + "x"
+									+ resolutions.get(resolutionWidth));
+							PrintStreamUtil.println(fileOut, "Zoom: " + zoom);
+							// Single Threaded
+
+							/*
+							 * Depth First BVH
+							 */
+							if (testSingleThreadedBvh)
+							{
+								PrintStreamUtil.println(fileOut,
+										"\n--SingleThreaded BVH Depth First--");
+								total = RayTrace.renderSingleThreadedBvh(depthFirstBvhBuilder,
+										triangles, eye, at, light, numReflections, showRaster,
+										fileOut);
+								addToTotal(models.get(path), resolution, zoom,
+										depthFirstBvhBuilder, 1, total, buildTotals);
+								System.gc();
+							}
+
+							/*
+							 * Depth First RCBVH
+							 */
+							if (testSingleThreadedRcbvh)
+							{
+								PrintStreamUtil.println(fileOut,
+										"\n--SingleThreaded RCBVH Depth First--");
+								total = RayTrace.renderSingleThreadedRcbvh(depthFirstRcbvhBuilder,
+										triangles, eye, at, light, numReflections, showRaster,
+										fileOut);
+								addToTotal(models.get(path), resolution, zoom,
+										depthFirstRcbvhBuilder, 1, total, buildTotals);
+								System.gc();
+							}
+
+							// Multi Threadded
+							for (int j = startThreads; j <= maxThreads; j *= 2)
+							{
+								/*
+								 * Thread Division RCBVH
+								 */
+								if (testConcurrentThreadDivisionRcbvh)
+								{
+									PrintStreamUtil.println(fileOut, "\n--Thread Division RCBVH("
+											+ j + ")--");
+									total = RayTrace.renderConcurrentRcbvh(
+											threadDivisionRcbvhBuilder, j, triangles, eye, at,
+											light, numReflections, showRaster, fileOut);
+									addToTotal(models.get(path), resolution, zoom,
+											threadDivisionRcbvhBuilder, j, total, buildTotals);
+									System.gc();
+								}
+
+								/*
+								 * N Children RCBVH
+								 */
+								if (testConcurrentNChildrenRcbvh)
+								{
+									PrintStreamUtil.println(fileOut, "\n--N Children RCBVH(" + j
+											+ ")--");
+									total = RayTrace.renderConcurrentRcbvh(nChildrenRcbvhBuilder,
+											j, triangles, eye, at, light, numReflections,
+											showRaster, fileOut);
+									addToTotal(models.get(path), resolution, zoom,
+											nChildrenRcbvhBuilder, j, total, buildTotals);
+									System.gc();
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			System.exit(0);
+		}
+
+		// Output Average times
+		if (fileOut != null)
+		{
+			PrintStream resultsOut = null;
+			String resultsFileName = "test_rcbvh_out.csv";
+			try
+			{
+				resultsOut = new PrintStream(resultsFileName);
+			}
+			catch (FileNotFoundException e)
+			{
+				System.err.printf("\nFailure to load \"%s\". Closing program...", resultsFileName);
+				System.exit(0);
+			}
+
+			resultsOut.println("Title,Builder(Threads),Num Triangles,Time(ms)");
+
+			PrintStreamUtil.println(fileOut, "\n" + sep);
+			PrintStreamUtil.println(fileOut, "Build Averages");
+			for (String modelName : buildTotals.keySet())
+			{
+				PrintStreamUtil.println(fileOut, "\n" + "---" + modelName + " - Triangles: "
+						+ modelTriangleCounts.get(modelName) + "---");
+
+				for (Float zoom : buildTotals.get(modelName).keySet())
+				{
+					PrintStreamUtil.println(fileOut, "Zoom: " + zoom);
+
+					for (String resolution : buildTotals.get(modelName).get(zoom).keySet())
+					{
+						PrintStreamUtil.println(fileOut, "Resolution: " + resolution);
+
+						for (IBvhBuilder bvhBuilder : buildTotals.get(modelName).get(zoom)
+								.get(resolution).keySet())
+						{
+							PrintStreamUtil.println(fileOut, "\n"
+									+ bvhBuilder.getClass().getSimpleName());
+							for (Integer numThreads : buildTotals.get(modelName).get(zoom)
+									.get(resolution).get(bvhBuilder).keySet())
+							{
+								Long average = buildTotals.get(modelName).get(zoom).get(resolution)
+										.get(bvhBuilder).get(numThreads)
+										/ numTestsPerModel;
+
+								PrintStreamUtil.println(fileOut, numThreads + " Threads - "
+										+ average + "ms");
+
+								resultsOut.print(resolution + " - " + zoom);
+								resultsOut.print("," + bvhBuilder.getClass().getSimpleName() + "("
+										+ numThreads + ")");
+								resultsOut.print("," + modelTriangleCounts.get(modelName));
+								resultsOut.println("," + average);
+							}
+						}
+					}
+				}
+			}
+			PrintStreamUtil.println(fileOut, sep);
+			fileOut.close();
+			resultsOut.close();
+		}
+	}
+
+	private static void addToTotal(String modelName, String resolution, Float zoom,
+			IBvhBuilder bvhBuilder, Integer numThreads, Long total,
+			Map<String, Map<Float, Map<String, Map<IBvhBuilder, Map<Integer, Long>>>>> buildTotals)
+	{
+		// Add Model Name
+		if (buildTotals.get(modelName) == null)
+		{
+			buildTotals.put(modelName,
+					new LinkedHashMap<Float, Map<String, Map<IBvhBuilder, Map<Integer, Long>>>>());
+		}
+
+		// Add Zoom
+		if (buildTotals.get(modelName).get(zoom) == null)
+		{
+			buildTotals.get(modelName).put(zoom,
+					new LinkedHashMap<String, Map<IBvhBuilder, Map<Integer, Long>>>());
+		}
+
+		// Add Resolution
+		if (buildTotals.get(modelName).get(zoom).get(resolution) == null)
+		{
+			buildTotals.get(modelName).get(zoom)
+					.put(resolution, new LinkedHashMap<IBvhBuilder, Map<Integer, Long>>());
+		}
+
+		// Add Builder
+		if (buildTotals.get(modelName).get(zoom).get(resolution).get(bvhBuilder) == null)
+		{
+			buildTotals.get(modelName).get(zoom).get(resolution)
+					.put(bvhBuilder, new LinkedHashMap<Integer, Long>());
+		}
+
+		// Add threads
+		if (buildTotals.get(modelName).get(zoom).get(resolution).get(bvhBuilder).get(numThreads) == null)
+		{
+			buildTotals.get(modelName).get(zoom).get(resolution).get(bvhBuilder)
+					.put(numThreads, new Long(0));
+		}
+
+		// Add Total
+		buildTotals
+				.get(modelName)
+				.get(zoom)
+				.get(resolution)
+				.get(bvhBuilder)
+				.put(numThreads,
+						buildTotals.get(modelName).get(zoom).get(resolution).get(bvhBuilder)
+								.get(numThreads)
+								+ total);
+	}
+}
